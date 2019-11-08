@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+   <title>Test3</title>
+   <link href="test3RESET" rel="stylesheet" />
+   <link href="test3CSS.css" rel="stylesheet"/>
+   <link href="test3FORMS.css" rel="stylesheet"/>
+   <script src="test3SUBMIT.js"></script>
+  
+</head>
+
+<body>
+	<header>
+		<img src="newHeader.png" alt="Test2" width="400" height="100"/>
+		<nav>
+			<ul>
+				<li><a href="#">Why Calgary</a></li>
+				<li><a href="#">City Search</a></li>
+				<li><a href="#">Fun Places To Go</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	 <section>
+	 
+      <h1>Traveler Survey</h1>
+      <p>Calgary, a cosmopolitan Alberta city with numerous skyscrapers, 
+	  owes its rapid growth to its status as the centre of Canada’s oil industry. However, 
+	  it’s still steeped in the western culture that earned it the nickname “Cowtown,” 
+	  evident in the Calgary Stampede, its massive July rodeo and festival that grew out 
+	  of the farming exhibitions once presented here. 
+      
+	  <br/><br/>Surveys are private and confidential. 
+	  Calgary Travel Locations will not 
+	  share your contact information 
+	  with third parties, <em>ever</em>. </p>
+     
+	 <h2>Required values are marked by an asterisk (*)</h2>
+	  
+	   <!--Question 1-->
+	  <form id="survey" action="http://www.example.com/calgary/survey" method="post">
+		
+		
+		
+		<!--Question 2-->
+		<!--Leftside-->
+		<fieldset id="travInfo">
+			<legend>Traveler Information</legend>
+			
+			
+			<div class="formRow">
+			<!--Question 3 Start-->
+				<label for="fullName">Full Name*</label>
+				<input name="travName" id="nameBox" type="text" 
+				placeholder="First and Last Name" required />
+			<!--Question 3 End-->
+			</div>
+			
+			 
+			<div class="formRow">
+			<!--Question 4 Start-->
+				<label for="phoneBox">Phone Number</label>
+				<input name="travPhone" id="phone" type="tel" 
+				placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
+			<!--Question 4 End-->
+			</div>
+			 
+			 
+			<div class="formRow">
+			<!--Question 5 Start-->
+				<label for="mailBox">E-mail*</label>
+				<input name="travEmail" id="mailBox" type="email" required />
+			<!--Question 5 End-->
+			</div>
+			 
+			 
+			<div class="formRow">
+			<!--Question 6 Start-->
+					<label for="selList">Where did you hear about us?<br />(select all that apply)</label>
+					<select name="infoSrc" id="info" size="3" multiple> 
+						<option value="internet">Internet</option>
+						<option value="word">Word of Mouth</option>
+						<option value="other">Other</option>
+					</select>
+					<!--Question 6 End-->
+				</div>	
+			 
+			 	
+			<div class="formRow">
+			<!--Question 7 Start-->
+				<label for="event">What was your Favourite Event</label>
+				<input name="favEvent" id="event" type="text" list="eventType" />
+					
+					<datalist id="eventType">
+						<option value="Calgary Boat Race & Festival" />
+						<option value="Calgary Stampede" />
+						<option value="Taste of Calgary" />
+					</datalist>
+			<!--Question 7 End-->		 
+			</div>
+			
+		</fieldset>
+		
+		<!--Rightside-->
+		<fieldset id="expInfo">
+			<legend>Share Your Experience From Calgary</legend>
+			
+			 
+			<div class="formRow">
+			<!--Question 8 Start-->
+				<label for="visit">Date of visit</label>
+				<input name="visitDate" id="visit" type="date" />
+			<!--Question 8 End-->
+			</div>
+			
+			<br/>
+			
+			 <!--Question 9 Start-->
+			<input name="reco" id="recoCheck" value="yes" type="checkbox" />
+			<label for="reco">Would You Recomend Traveling To Calgary to a Friend<br/></label>
+			<!--Question 9 End-->
+			
+			<br/>
+			
+			<div class="formRow">
+			<!--Question 10 Start-->
+				<label for="rangeBox">Rate Your Overall Stay<br />
+				(0=poor; 10=great)</label>
+				
+					0
+					<input name="stayRate" id="rangeBox" type="range" 
+						value="10" step="1" min="0" max="20" />
+					20
+			<!--Question 10 End-->	
+			</div>
+			
+			
+			
+			
+			
+		
+		</fieldset>
+	  
+		<div id="buttons">
+			
+			<input type="submit" value="Submit My Survey" />
+			<input type="reset" value="Cancel" />
+			
+		</div>
+	 
+	 </form>
+
+     
+   </section>
+	
+	
+	<footer>
+		<i>Calgary Travel Locations</i>
+		<address>
+		  811 Calgary Drive <br />
+		  Calgary Mount, CAN  32175 <br />
+		  (386) 555 - 7499
+      </address>
+	</footer>
+
+</body>
+</html>
